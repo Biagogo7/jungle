@@ -4,6 +4,11 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.length < 1 %>
+    <p><strong> Your cart is empty </strong></p>
+    <a href="/"> Click to go to the HomePage </a>
+  <% else %>  
+  
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -15,38 +20,40 @@
         </tr>
       </thead>
       <tbody>
-        <% enhanced_cart.each do |item| %>
-          <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
-        <% end %>
-      </tbody>
-      <tfoot>
-        <tr>
+          <% enhanced_cart.each do |item| %>
+            <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
+          <% end %>
+          </tbody>
+          <tfoot>
+          <tr>
           <th colspan="4">
-            TOTAL:
+          TOTAL:
           </th>
           <th>
-            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+          <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <%= form_tag orders_path do %>
-        <script
-          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="<%= cart_subtotal_cents %>"
-          data-name="Jungle"
-          data-description="Khurram Virani's Jungle Order"
-          data-locale="auto"
-          data-email="kvirani@gmail.com"
-          data-currency="cad">
-        </script>
-      <% end %>
-    </div>
-  </div>
-
+          </tr>
+          </tfoot>
+          </table>
+          </div>
+          
+          <div class="row">
+          <div class="col-xs-12">
+          <%= form_tag orders_path do %>
+            <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-amount="<%= cart_subtotal_cents %>"
+            data-name="Jungle"
+            data-description="Khurram Virani's Jungle Order"
+            data-locale="auto"
+            data-email="kvirani@gmail.com"
+            data-currency="cad">
+            </script>
+            <% end %>
+            </div>
+            </div>
+               
+  <% end %>  
 </section>
+            
