@@ -1,0 +1,22 @@
+<h1>Signup!</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+<div>
+   <%= f.text_field :firstname, :placeholder => "Enter your first name" %>
+</div>
+<div>
+  <%= f.text_field :lastname, :placeholder => "Enter your last name" %>
+</div>
+  <%= f.text_field :email, :placeholder => "Enter your email" %>
+<div>
+  <%= f.password_field :password, :placeholder => "Enter your password" %>
+</div>
+<div>
+ <%= f.password_field :password_confirmation, :placeholder => "Enter your password again" %>
+</div>
+<div>
+  <%= f.submit "Submit" %>
+</div> 
+
+<% end %>
+
