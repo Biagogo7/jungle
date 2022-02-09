@@ -31,3 +31,16 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+## Screenshots
+
+!["Jungle Home Page"](https://github.com/Biagogo7/jungle/blob/master/docs/HomePage.PNG?raw=true)
+
+!["Jungle Order Page"](https://github.com/Biagogo7/jungle/blob/master/docs/Order%20Page.PNG?raw=true)
+
+!["Jungle Cart Page"](https://github.com/Biagogo7/jungle/blob/master/docs/Cart%20Page.PNG?raw=true)
+
+!["Jungle Admin All Product Page"](https://github.com/Biagogo7/jungle/blob/master/docs/Admin%20All%20Product%20Page.PNG?raw=true)
+
+!["Jungle Admin All Categories Page"](https://github.com/Biagogo7/jungle/blob/master/docs/Admin%20All%20Categories%20Page.PNG?raw=true)
