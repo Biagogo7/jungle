@@ -17,7 +17,7 @@ RSpec.feature "Visitor navigate from home page to product page", type: :feature,
     end
   end
 
-  scenario "They see all products" do
+  scenario "They see product details" do
     # ACT
     visit root_path
     
